@@ -95,6 +95,7 @@ public class Urun {
     public void setRaf(String raf) {
         this.raf = raf;
     }
+    //github oldu mugit
 }
 
 
