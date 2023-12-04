@@ -1,10 +1,7 @@
 package depoproje;
-
 public class Urun {
     /*
-	 * basit bir depo projesi
-	 *
-	 * Calisan bir fabrikada uygulanan bir sistem olan depo uygulamasidir.
+     Calisan bir fabrikada uygulanan bir sistem olan depo uygulamasidir.
 	 *
 	 * 1-) burada oncelikle urunun tanimlamasi  yapilir.
 	 id
@@ -12,19 +9,15 @@ public class Urun {
 	 uretici
 	 miktar
 	 birim ve
-	 raf (6 adet fields mevcut)*/
+	 raf (6 adet fields mevcut)
 
-    private int id=0;
-    private String urunIsmi;
-    private String uretici;
-    private int miktar=0;
-    private String birim;
-    private String raf=null;
-
-
-    public Urun(){
-
-    }
+    */
+    int id = 0;
+    String urunIsmi;
+    String uretici;
+    int miktar = 0;
+    String birim;
+    String raf=null;
 
     public Urun(int id, String urunIsmi, String uretici, int miktar, String birim, String raf) {
         this.id = id;
@@ -34,7 +27,9 @@ public class Urun {
         this.birim = birim;
         this.raf = raf;
     }
+    public Urun(){
 
+    }
     @Override
     public String toString() {
         return "Urun{" +
@@ -46,7 +41,7 @@ public class Urun {
                 ", raf='" + raf + '\'' +
                 '}';
     }
-
+    /*Getter kısmı*/
     public int getId() {
         return id;
     }
@@ -72,6 +67,7 @@ public class Urun {
     }
 
 
+    /*Setter kısmı*/
     public void setId(int id) {
         this.id = id;
     }
@@ -95,10 +91,4 @@ public class Urun {
     public void setRaf(String raf) {
         this.raf = raf;
     }
-    //github oldu mugit
 }
-
-
-
-
-
