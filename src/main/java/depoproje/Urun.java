@@ -1,47 +1,55 @@
 package depoproje;
 public class Urun {
     /*
-     Calisan bir fabrikada uygulanan bir sistem olan depo uygulamasidir.
-	 *
-	 * 1-) burada oncelikle urunun tanimlamasi  yapilir.
-	 id
-	 urunIsmi
-	 uretici
-	 miktar
-	 birim ve
-	 raf (6 adet fields mevcut)
+      * basit bir depo projesi
+      *
+      * Calisan bir fabrikada uygulanan bir sistem olan depo uygulamasidir.
+      *
+      * 1-) burada oncelikle urunun tanimlamasi  yapilir.
+      id
+      urunIsmi
+      uretici
+      miktar
+      birim ve
+      raf (6 adet fields mevcut)
 
-    */
-    int id = 0;
-    String urunIsmi;
-    String uretici;
-    int miktar = 0;
-    String birim;
-    String raf=null;
+      *
+      * 2-) methodlar olusturacagiz.
+      * 		urunTanimlama 	==>  urunun ismi, ureticisi ve birimi girilecek. id  alınacak.  (miktar 0) (raf null )
+      *
+      * 		urunListele 	==> tanimlanan urunler listelenecek. urunun adeti ve raf numarasi tanimlama yapilmadiysa default deger gorunsun.
+             Printf
 
-    public Urun(int id, String urunIsmi, String uretici, int miktar, String birim, String raf) {
-        this.id = id;
-        this.urunIsmi = urunIsmi;
-        this.uretici = uretici;
-        this.miktar = miktar;
-        this.birim = birim;
-        this.raf = raf;
-    }
-    public Urun(){
+      *
+      * 		urunGirisi 		==> giris yapmak istedigimiz urnunun id numarasi ile girecegiz.
+      *
+      * 		urunuRafaKoy 	==> listeden urunu sececegiz ve id numarasina gore urunu rafa koyacagiz.
+      *
+      *		urunCikisi 		==> listeden urunu sececegiz ve urunun cikis yapcagiz. burada urun listesinden sadece miktarda degisiklik yapilacak.
+      *							urun adedi 0dan az olamaz. 0 olunca urun tanimlamasi silinmesin. sadece miktari 0 olsun.*/
 
-    }
-    @Override
-    public String toString() {
-        return "Urun{" +
-                "id=" + id +
-                ", urunIsmi='" + urunIsmi + '\'' +
-                ", uretici='" + uretici + '\'' +
-                ", miktar=" + miktar +
-                ", birim='" + birim + '\'' +
-                ", raf='" + raf + '\'' +
-                '}';
-    }
-    /*Getter kısmı*/
+
+     private int id = 0;
+     private String urunIsmi;
+     private String uretici;
+     private int miktar = 0;
+     private String birim;
+     private String raf=null;
+
+     public Urun(int id, String urunIsmi, String uretici, int miktar, String birim, String raf) {
+         this.id = id;
+         this.urunIsmi = urunIsmi;
+         this.uretici = uretici;
+         this.miktar = miktar;
+         this.birim = birim;
+         this.raf = raf;
+     }
+     public Urun(){
+     }
+
+
+
+     /*Getter kısmı*/
     public int getId() {
         return id;
     }
@@ -90,5 +98,18 @@ public class Urun {
 
     public void setRaf(String raf) {
         this.raf = raf;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Urun{" +
+                "id=" + id +
+                ", urunIsmi='" + urunIsmi + '\'' +
+                ", uretici='" + uretici + '\'' +
+                ", miktar=" + miktar +
+                ", birim='" + birim + '\'' +
+                ", raf='" + raf + '\'' +
+                '}';
     }
 }

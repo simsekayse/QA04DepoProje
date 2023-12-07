@@ -12,7 +12,30 @@ public class Depo {
     public Depo() {
 
         this.urunList = new ArrayList<>() ;
-    };
+    }
+    public void urunTopluEkle(){
+        Urun ur1=new Urun(1,"Un","Hekimoglu",0,"Cuval","Raf1");
+        Urun ur2=new Urun(2,"İrmik","Ankara",1,"Cuval","Raf2");
+        Urun ur3=new Urun(3,"Mercimek","Yayla",1,"Cuval","Raf3");
+        Urun ur4=new Urun(4,"Bulgur","Yayla",2,"Cuval","Raf3");
+        Urun ur5=new Urun(5,"K.Fasulye","Yayla",3,"Cuval","Raf3");
+        Urun ur6=new Urun(6,"Nohut","Yayla",5,"Cuval","Raf3");
+        Urun ur7=new Urun(7,"Pirinç","Yayla",8,"Cuval","Raf3");
+        Urun ur8=new Urun(8,"Makarna","Ankara",13,"Cuval","Raf3");
+        Urun ur9=new Urun(9,"Şehriye","Filiz",21,"Cuval","Raf3");
+        Urun ur10=new Urun(10,"Şeker","Balküpü",34,"Cuval","Raf4");
+        this.urunList.add(ur1);
+        this.urunList.add(ur2);
+        this.urunList.add(ur3);
+        this.urunList.add(ur4);
+        this.urunList.add(ur5);
+        this.urunList.add(ur6);
+        this.urunList.add(ur7);
+        this.urunList.add(ur8);
+        this.urunList.add(ur9);
+        this.urunList.add(ur10);
+    }
+
     //depoya ürün ekleme
     public void urunEkle(Urun urun){
         urunList.add(urun);
@@ -40,7 +63,7 @@ public class Depo {
         System.out.printf("%-8s%-12s%-15s%-12s%-12s%-8s%n", "ID", "ISIM", "URETICI", "MIKTAR", "BIRIM", "RAF");
         System.out.println("---------------------------------------------------------------");
         for (Urun product : urunList) {
-            System.out.printf("%-8s%-12s%-15s%-12s%-12s%-8s%n", product.id, product.urunIsmi, product.uretici, product.miktar, product.birim, product.raf);}
+            System.out.printf("%-8s%-12s%-15s%-12s%-12s%-8s%n", product.getId(), product.getUrunIsmi(), product.getUretici(), product.getMiktar(), product.getBirim(), product.getRaf());}
         System.out.println();
     }
     //urunGirisi==> giris yapmak istedigimiz urnunun id numarasi ile girecegiz.
@@ -56,16 +79,6 @@ public class Depo {
             }
         }
     }
-
-    //urunuRafaKoy ==> listeden urunu sececegiz ve id numarasina gore urunu rafa koyacagiz
-//    public void urunuRafaKoy(int id, String raf) { //1.yol
-//        for (Urun product : urunList) {
-//            if (product.getId() == id) {
-//                product.setRaf(raf);
-//                break;
-//            }
-//        }
-//    }
 
     public void urunuRafaKoy() {  //2.yol
         System.out.print("Urun ID: ");
@@ -102,28 +115,6 @@ public class Depo {
                     break;
                 }
             }  }
-    }
-    public void urunTopluEkle(){
-        Urun ur1=new Urun(1,"Un","Hekimoglu",0,"Cuval","Raf1");
-        Urun ur2=new Urun(2,"İrmik","Ankara",1,"Cuval","Raf2");
-        Urun ur3=new Urun(3,"Mercimek","Yayla",1,"Cuval","Raf3");
-        Urun ur4=new Urun(4,"Bulgur","Yayla",2,"Cuval","Raf3");
-        Urun ur5=new Urun(5,"K.Fasulye","Yayla",3,"Cuval","Raf3");
-        Urun ur6=new Urun(6,"Nohut","Yayla",5,"Cuval","Raf3");
-        Urun ur7=new Urun(7,"Pirinç","Yayla",8,"Cuval","Raf3");
-        Urun ur8=new Urun(8,"Makarna","Ankara",13,"Cuval","Raf3");
-        Urun ur9=new Urun(9,"Şehriye","Filiz",21,"Cuval","Raf3");
-        Urun ur10=new Urun(10,"Şeker","Balküpü",34,"Cuval","Raf4");
-        this.urunList.add(ur1);
-        this.urunList.add(ur2);
-        this.urunList.add(ur3);
-        this.urunList.add(ur4);
-        this.urunList.add(ur5);
-        this.urunList.add(ur6);
-        this.urunList.add(ur7);
-        this.urunList.add(ur8);
-        this.urunList.add(ur9);
-        this.urunList.add(ur10);
     }
 
 }
